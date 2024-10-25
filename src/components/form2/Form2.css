@@ -1,0 +1,121 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.form-page {
+    background-image: url("../../assets/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    display: flex;
+    width: 183vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #46769B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+button:hover {
+    background-color: #2F5F8A;
+    transition: 0.7s;
+}
+
+.button-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+}
+
+nav h1{
+    width: 80%;
+    background-color: #b2d0eb;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    border-radius: 90%;
+    color: #46769B;
+    font-size: 35px;
+}
+
+.current-page{
+    background-color: aliceblue;
+}
+
+.form-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 100px 30px;
+}
+
+.form{
+    background-color: #b2d0eb;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
+    background-color: #ffffff3e;
+}
+
+input:focus {
+    outline: none;
+    border-color: #174978;
+    box-shadow: #75A2BF;
+}
+
+@media (max-width: 600px) {
+    .form-body {
+        padding: 20px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+

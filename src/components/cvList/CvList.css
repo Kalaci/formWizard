@@ -1,0 +1,87 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-list-body{
+    background-image: url("../../assets/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 593%; 
+}
+
+.cv-list-container {
+  width: 80%; 
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cv-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #d5e6f6;
+  transition: box-shadow 0.3s;
+  color: black;
+  border-bottom: #2F5F8A;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv-item:hover {
+  background-color: #e5f0fb;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.homepage-nav2{
+    background-color: black; 
+    display: flex;
+    gap: 25%;
+    justify-content: center; 
+    padding: 20px 0;
+    width: 594%; 
+}
+
+.homepage-nav2 h2{
+    color: white; 
+    margin: 0 20px; 
+    text-align: center;
+}
+
+.main-list-body input{
+  width: 79%;
+}
+
+@media (max-width: 1200px) {
+    .home-page {
+        width: 239%;
+    }
+
+    .homepage-nav {
+        width: 239%;
+    }
+}
