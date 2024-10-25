@@ -6,6 +6,7 @@ import Form2 from './components/form2/Form2';
 import Form3 from './components/form3/Form3';
 import Cv from './components/cv/Cv';
 import CvList from './components/cvList/CvList';
+import CvUpdate from './components/cvUpdate/CvUpdate';
 
 function App() {
   // console.log('App rendered');
@@ -17,6 +18,7 @@ function App() {
       <Route path="/personal-info2" element={<Form2 />} />
       <Route path="/personal-info3" element={<Form3 />} />
       <Route path="/cv" element={<Cv />} />
+      <Route path='/cv-list' element={<CvList/>} />
       <Route path='/cv-list' element={<CvList/>} />
 
     </Routes>

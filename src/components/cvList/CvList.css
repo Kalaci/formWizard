@@ -72,8 +72,39 @@ p {
     text-align: center;
 }
 
-.main-list-body input{
+.filtering-section input{
   width: 79%;
+}
+
+ input::placeholder{
+  color: white;
+}
+
+.filtering-section{
+  display: flex;
+}
+
+.filtering-section select{
+  background-color: #2f608a00;
+  border: none;
+}
+
+.cv-item-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-name {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+}
+
+#delete {
+  color: red;
+  cursor: pointer;
+  padding-right: 10px;
 }
 
 @media (max-width: 1200px) {

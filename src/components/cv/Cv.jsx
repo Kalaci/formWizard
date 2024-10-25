@@ -1,6 +1,6 @@
 import './Cv.css';
 import { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const Cv = () => {
     const navigate = useNavigate();
@@ -43,14 +43,17 @@ const Cv = () => {
             <div className="cv-page">
                 <h1>Curriculum Vitae</h1>
                 <div className='form'>
-                    <section className="pers-info">
+                    <section className="pers-info" onClick={()=>{navigate('/personal-info', { state: { userId: userId }})}}>
                         <h2>Personal Information</h2>
                         <p><strong>Name:</strong> {userData.name} {userData.lastName}</p>
                         <p><strong>Email:</strong> {userData.email}</p>
                         <p><strong>Phone:</strong> {userData.phone}</p>
+                        <p><strong>Address:</strong> {userData.address}</p>
+                        <p><strong>birthday:</strong> {userData.birthday}</p>
+
                     </section>
 
-                    <section className="edu-info">
+                    <section className="edu-info" onClick={()=>{navigate('/personal-info2', { state: { userId: userId }})}}>
                         <h2>Education</h2>
                         {userData.education.length > 0 ? (
                             userData.education.map((edu, index) => (
@@ -65,7 +68,7 @@ const Cv = () => {
                         )}
                     </section>
                     
-                    <section className="job-info">
+                    <section className="job-info" onClick={()=>{navigate('/personal-info3', { state: { userId: userId }})}}>
                         <h2>Job Experience</h2>
                         {userData.job.length > 0 ? (
                             userData.job.map((job, index) => (

@@ -15,8 +15,11 @@ const Form1 = () => {
     lastName: '',
     email: '',
     phone: '',
+    address: '',
+    birthday: '',
     education: [],
-    job: []
+    job: [],
+    timeCreated: '',
   });
 
   // Initial fetch in case of backtracking
@@ -31,8 +34,11 @@ const Form1 = () => {
               lastName: data.lastName || '',
               email: data.email || '',
               phone: data.phone || '',
+              address: data.address || '',
+              birthday: data.birthday || '',
               education: data.education || [],
               job: data.job || [],
+              timeCreated: data.timeCreated || '',
             });
           }
         })
@@ -44,14 +50,22 @@ const Form1 = () => {
   const handleSubmit = async () => {
     
     if (!userId) {
+      const currentTime = new Date();
+      console.log(currentTime);
+      const formDataWithTime = {
+        ...formData,
+        timeCreated: currentTime,
+      };
+  
       const response = await fetch('http://localhost:3000/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataWithTime),
       });
       const data = await response.json();
       const newUserId = data.id;
       setUserId(newUserId);
+      
       navigate(`/personal-info2`, { state: { userId: newUserId } });
     } else {
       await fetch(`http://localhost:3000/users/${userId}`, {
@@ -62,6 +76,7 @@ const Form1 = () => {
       navigate(`/personal-info2`, { state: { userId: userId } });
     }
   };
+
 
   return (
     <div className="form-page">
@@ -101,6 +116,19 @@ const Form1 = () => {
           value={formData.phone}
           onChange={e => setFormData({ ...formData, phone: e.target.value })}
           placeholder="+012 12 345 6789"
+        />
+        <label>Enter Address</label> {/* New Address Field */}
+        <input
+          type="text"
+          value={formData.address}
+          onChange={e => setFormData({ ...formData, address: e.target.value })}
+          placeholder="Enter your address"
+        />
+        <label>Enter Birthday</label> {/* New Birthday Field */}
+        <input
+          type="date"
+          value={formData.birthday}
+          onChange={e => setFormData({ ...formData, birthday: e.target.value })}
         />
       </div>
       <button onClick={handleSubmit}>Continue</button>

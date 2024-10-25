@@ -1,52 +1,31 @@
 {
   "users": [
     {
-      "id": "4224",
-      "name": "Test",
-      "lastName": "Test",
-      "email": "Testing",
+      "name": "Huerta",
+      "lastName": "K",
+      "email": "h@email.com",
       "phone": "123456789",
+      "address": "address",
+      "birthday": "2024-10-02",
       "education": [
         {
-          "degree": "Test",
-          "university": "Test",
-          "startYear": "2024",
-          "finishYear": "2027"
+          "degree": "degree",
+          "university": "uni",
+          "startYear": "2020",
+          "finishYear": "2024"
         }
       ],
       "job": [
         {
-          "jobTitle": "test",
-          "companyName": "test",
-          "startDate": "2024-10-25",
-          "endDate": "",
+          "jobTitle": "job",
+          "companyName": "comp",
+          "startDate": "2024-10-02",
+          "endDate": "2024-10-03",
           "jobDescription": ""
-        }
-      ]
-    },
-    {
-      "id": "162b",
-      "name": "Name",
-      "lastName": "Last Name",
-      "email": "name@email.com",
-      "phone": "123456789",
-      "education": [
-        {
-          "degree": "Bachelor in Software Engineering",
-          "university": "Test",
-          "startYear": "2000",
-          "finishYear": "2000"
         }
       ],
-      "job": [
-        {
-          "jobTitle": "sdsabbg",
-          "companyName": "",
-          "startDate": "",
-          "endDate": "",
-          "jobDescription": ""
-        }
-      ]
+      "timeCreated": "2024-10-25T08:58:12.748Z",
+      "id": "3b84"
     }
   ]
 }
